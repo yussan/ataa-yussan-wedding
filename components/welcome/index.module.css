@@ -1,0 +1,49 @@
+.wrapper {
+    background-image: url('/assets/images/yna/home.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper p {
+    margin: 0;
+    color: #FFF;
+}
+
+
+.top {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.top .text-title {
+
+}
+
+.top .text-bride {
+
+}
+
+.top .text-yth {
+
+}
+
+
+.top .text-yth {
+
+}
+
+.top img {
+    margin: 12px 0;
+    width: 58px;
+}
