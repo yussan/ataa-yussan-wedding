@@ -1,0 +1,33 @@
+.wrapper {
+    margin: 0 auto;
+    width: 500px;
+    max-width: 100%;
+    background: #FBFBF5;
+    height: 100vh;
+}
+
+.wrapperLogin {
+    margin: 0 auto;
+    width: 500px;
+    max-width: 100%;
+    background: #FBFBF5;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading {
+    animation: rotation 2s infinite linear;
+}
+
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
