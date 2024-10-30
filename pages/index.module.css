@@ -1,7 +1,7 @@
 .wrapper {
     margin: 0 auto;
     width: 500px;
-    max-width: 100%;
+    max-width: 100% !important;
     background: #FBFBF5;
     min-height: 100vh;
 }
@@ -9,7 +9,7 @@
 .wrapperLogin {
     margin: 0 auto;
     width: 500px;
-    max-width: 100%;
+    max-width: 100% !important;
     background: #FBFBF5;
     height: 100vh;
     display: flex;
