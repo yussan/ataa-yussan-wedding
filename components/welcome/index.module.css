@@ -3,6 +3,18 @@
     height: 100vh;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    width:inherit;
+    z-index: 999;
+    top: 0;
+    transition: all 1.1s ease;
+}
+
+.wrapper-hide {
+    top: -100vh;
 }
 
 .wrapper p {
@@ -12,11 +24,13 @@
 
 
 .top {
-    margin-top: 10px;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-image: url('/assets/images/shadow-top.png');
+    background-size: cover;
 }
 
 .bottom {
@@ -24,6 +38,9 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-bottom: 80px;
+    background-image: url('/assets/images/shadow-bottom.png');
+    background-size: cover;
 }
 
 .top .text-title {

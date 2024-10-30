@@ -1,5 +1,6 @@
 {
   "private": true,
+  "node": "20.15.1",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
