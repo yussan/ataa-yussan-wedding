@@ -22,7 +22,9 @@ const WelcomePage = ({ guestName = "FULL NAME" }) => {
         <Text style={{ marginBottom: "-2px" }} size="small">
           The Wedding of
         </Text>
-        <Title size="large">Ataa & Yusuf</Title>
+        <Title style={{ fontWeight: "bold" }} size="large">
+          Ataa & Yusuf
+        </Title>
       </div>
       <div className={Styles.bottom}>
         <Text style={{ marginBottom: "10px", lineHeight: "22px" }} size="small">

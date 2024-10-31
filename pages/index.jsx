@@ -4,6 +4,7 @@ import Head from "next/head";
 import Styles from "./index.module.css";
 
 import WelcomePage from "../components/welcome";
+import Page2 from "../components/page2";
 
 export default function Home() {
   const [ready, setReady] = useState(false);
@@ -35,7 +36,8 @@ export default function Home() {
     <div className={Styles.wrapper}>
       {/* dfdf */}
       <WelcomePage guestName={guest} />
-      <div>haha</div>
+
+      <Page2 />
     </div>
   );
 }
