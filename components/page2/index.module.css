@@ -1,22 +1,46 @@
 .wrapper {
     background-color: #2A4234;
+    min-height: 100vh;
+}
+
+.wrapper hr {
+    border-color: #FFF;
+    margin-top: 54px;
+    margin-bottom: 36px;
 }
 
 .head {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 413px;
+    padding-top: 30px;
 }
 
 .headImage {
     padding: 109px 0;
-    position: absolute; 
+    z-index: 200;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     text-align: center;
     height: inherit;
+    width: 250px;
+    height: 250px;
 }
 
 .headFlower {
     position: absolute;
+}
+
+.headFlowerLeft {
+    left: 0;
+    top: 65px;
+}
+
+.headFlowerRight {
+    right: 0;
+    bottom: 20px;
 }

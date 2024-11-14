@@ -1,0 +1,47 @@
+.wrapper {
+    min-height: 100vh;
+    background-color: #2A4234;
+    background-image: url('/assets/images/page-3/background.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 64px 0;
+}
+
+.content {
+    margin: 0 auto;
+    border: 5px solid #FFF;
+    border-radius: 350px;
+    background-color: #2A4234;
+    width: 350px;
+}
+
+.contentCatin {
+    padding: 67px 20px;
+    text-align: center;
+    color: #FFF;
+}
+
+.contentCatin img {
+    width: 230px;
+}
+
+.socmed {
+   
+}
+
+.socmed a {
+    color: #FFF; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    text-decoration: none;
+ }
+
+.socmed img {
+   width: 24px; 
+}
+

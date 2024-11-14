@@ -1,0 +1,20 @@
+.wrapper {
+    padding: 40px;
+    background-color: #000000;  
+    color: #FFF; 
+    text-align: center;
+    padding-top: 40px;
+}
+
+.wrapper hr {
+    margin: 40px 0;
+}
+
+
+.imageSlide {
+    height: 700px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

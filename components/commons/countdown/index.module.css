@@ -1,0 +1,17 @@
+.wrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.box {
+    background-color: #D9D9D9;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px 15px;
+    border-radius: 15px;;
+}
+
+.type {
+    font-size: 20px;
+}

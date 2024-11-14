@@ -1,0 +1,17 @@
+.wrapper {
+    background-color: #FAEDDB;
+    color: #373737;
+    padding: 30px;
+    text-align: center;
+}
+
+.content {
+    border: 1px solid #2A4234;
+    padding: 39px;
+    border-radius: 39px;
+}
+
+.wrapper img.preview {
+    max-width: 100%;
+    margin: 20px 0;
+}

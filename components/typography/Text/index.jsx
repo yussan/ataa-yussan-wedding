@@ -9,8 +9,8 @@ const fontSize = {
 const Text = ({ style, children, size = "medium" }) => {
   return (
     <p
-      style={{ ...{ fontSize: fontSize[size] }, ...style }}
       className={Style.title}
+      style={{ ...{ fontSize: fontSize[size] }, ...style }}
     >
       {children}
     </p>
