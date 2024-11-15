@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Head from "next/head";
 import Styles from "./index.module.css";
 
 import WelcomePage from "../components/welcome";
@@ -10,6 +9,7 @@ import Page4 from "../components/page4";
 import Page5 from "../components/page5";
 import Page6 from "../components/page6";
 import Page7 from "../components/page7";
+import Footer from "../components/footer";
 
 export default function Home() {
   const [ready, setReady] = useState(false);
@@ -46,13 +46,27 @@ export default function Home() {
 
       <Page3 />
 
+      <img
+        style={{ width: "100%", marginBottom: "-5px" }}
+        src="/assets/images/common/gradient-green-yellow.jpeg"
+      />
+
       <Page4 />
+
+      <img
+        style={{ width: "100%", marginBottom: "-5px" }}
+        src="/assets/images/common/gradient-yellow-black.jpeg"
+      />
 
       <Page5 />
 
       <Page6 />
 
       <Page7 />
+
+      <Footer />
+
+      {/* <Player /> */}
     </div>
   );
 }

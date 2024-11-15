@@ -4,8 +4,12 @@
 /* font-family: 'Miama', sans-serif; */
 /* font-family: 'Microsoft Sans Serif', sans-serif; */
 
-html, body {
+
+
+html,
+body {
     padding: 0;
     margin: 0;
     background-color: #2A4234;
+    font-family: 'Microsoft Sans Serif', sans-serif;
 }

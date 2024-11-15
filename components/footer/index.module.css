@@ -1,0 +1,10 @@
+.wrapper {
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.wrapper a {
+    color: #FFF;
+}

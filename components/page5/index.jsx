@@ -6,10 +6,16 @@ import { useEffect } from "react";
 
 const page5 = () => {
   const images = [
+    "/assets/images/page-5/PRDNA-144.jpeg",
+    "/assets/images/page-5/PRDNA-94.jpeg",
+    "/assets/images/page-5/PRDNA-170.jpeg",
+    "/assets/images/page-5/PRDNA-245.jpeg",
     "/assets/images/page-5/STY01859.jpeg",
-    "/assets/images/page-5/STY01859.jpeg",
-    "/assets/images/page-5/STY01859.jpeg",
-    "/assets/images/page-5/STY01859.jpeg",
+    "/assets/images/page-5/STY01889.jpg",
+    "/assets/images/page-5/STY01995.jpg",
+    "/assets/images/page-5/STY02059.jpg",
+    "/assets/images/page-5/STY02119.jpg",
+    "/assets/images/page-5/STY02146.jpeg",
   ];
 
   useEffect(() => {

@@ -1,6 +1,8 @@
+import Styles from "./index.module.css";
+
 const Footer = () => {
   return (
-    <div>
+    <div className={Styles.wrapper}>
       Online Wedding Invitation
       <br />
       Powered by{" "}
