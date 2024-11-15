@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Script from "next/script";
 import Title from "../typography/Title";
 import Text from "../typography/Text";
@@ -7,6 +7,7 @@ import TextField from "../form/TextField";
 import TextArea from "../form/TextArea";
 import Radio from "../form/Radio";
 import Button from "../button";
+import Comment from "../commons/comments";
 
 const dummyComment = [
   {
@@ -18,10 +19,17 @@ const dummyComment = [
   },
 ];
 
+const LOCAL_STORAGE_KEY = "yna_comments";
+
 const Page7 = () => {
   const [valName, setValName] = useState("");
   const [valNote, setValNote] = useState("");
   const [valComming, setValComming] = useState("yes");
+  const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+    fetchComments();
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,14 +41,37 @@ const Page7 = () => {
         })
         .then(function (token) {
           // Add your logic to submit to your backend server here.
-          console.log("token", token);
           if (!token) {
             alert("Mohon ulangi rechaptcha tidak valid!");
           } else {
             // submit to BE
+            saveComments();
           }
         });
     });
+  };
+
+  const fetchComments = () => {
+    const commentData = localStorage.getItem(LOCAL_STORAGE_KEY);
+
+    if (commentData) {
+      const commentDataArr = JSON.parse(commentData);
+      setComments(commentDataArr);
+    }
+  };
+
+  const saveComments = () => {
+    const currComment = [...comments];
+    currComment.unshift({
+      name: valName,
+      note: valNote,
+      dateTime: new Date().toISOString(),
+      attendance: valComming,
+    });
+
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(currComment));
+
+    fetchComments();
   };
 
   return (
@@ -107,8 +138,22 @@ const Page7 = () => {
               </div>
             </Button>
           </form>
+
+          <br />
+          <br />
+
+          <div>
+            {comments.length < 1 ? (
+              <Text size="small">Belum ada pesan</Text>
+            ) : (
+              comments.map((n) => {
+                return <Comment {...n} />;
+              })
+            )}
+          </div>
         </div>
       </div>
+
       <Script src="https://www.google.com/recaptcha/api.js?render=6Le-Rn4qAAAAAHHhOEta7v6chIqg2QHwTmdewGII" />
     </div>
   );
