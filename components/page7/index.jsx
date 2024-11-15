@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Script from "next/script";
 import Title from "../typography/Title";
 import Text from "../typography/Text";
 import Styles from "./index.module.css";
@@ -7,6 +8,16 @@ import TextArea from "../form/TextArea";
 import Radio from "../form/Radio";
 import Button from "../button";
 
+const dummyComment = [
+  {
+    id: "1234",
+    name: "Aldia Itii Rihmitiki",
+    note: "Sayang semua kok",
+    dateTime: "2024-11-15T03:49:12Z",
+    attendance: "yes",
+  },
+];
+
 const Page7 = () => {
   const [valName, setValName] = useState("");
   const [valNote, setValNote] = useState("");
@@ -14,7 +25,22 @@ const Page7 = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(valName, valNote, valComming);
+    // console.log(valName, valNote, valComming);
+    grecaptcha.ready(function () {
+      grecaptcha
+        .execute("6Le-Rn4qAAAAAHHhOEta7v6chIqg2QHwTmdewGII", {
+          action: "submit",
+        })
+        .then(function (token) {
+          // Add your logic to submit to your backend server here.
+          console.log("token", token);
+          if (!token) {
+            alert("Mohon ulangi rechaptcha tidak valid!");
+          } else {
+            // submit to BE
+          }
+        });
+    });
   };
 
   return (
@@ -53,10 +79,10 @@ const Page7 = () => {
             />
 
             <Button
-              className="g-recaptcha"
-              data-sitekey="6Le-Rn4qAAAAAHHhOEta7v6chIqg2QHwTmdewGII"
-              data-callback="onSubmit"
-              data-action="submit"
+              // className="g-recaptcha"
+              // data-sitekey="6Le-Rn4qAAAAAHHhOEta7v6chIqg2QHwTmdewGII"
+              // data-callback="onSubmit"
+              // data-action="submit"
               type="submit"
               style={{
                 width: "190px",
@@ -83,6 +109,7 @@ const Page7 = () => {
           </form>
         </div>
       </div>
+      <Script src="https://www.google.com/recaptcha/api.js?render=6Le-Rn4qAAAAAHHhOEta7v6chIqg2QHwTmdewGII" />
     </div>
   );
 };

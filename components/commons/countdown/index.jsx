@@ -64,7 +64,7 @@ const Countdown = () => {
     <div className={Styles.wrapper}>
       <div className={Styles.box}>
         <Text style={{ margin: "10px 0" }}>
-          <div style={{ fontSize: "50px" }} className={Styles.number}>
+          <div style={{ fontSize: "45px" }} className={Styles.number}>
             {days}
           </div>
         </Text>
@@ -75,7 +75,7 @@ const Countdown = () => {
 
       <div className={Styles.box}>
         <Text style={{ margin: "10px 0" }}>
-          <div style={{ fontSize: "50px" }} className={Styles.number}>
+          <div style={{ fontSize: "45px" }} className={Styles.number}>
             {hours}
           </div>
         </Text>
@@ -86,7 +86,7 @@ const Countdown = () => {
 
       <div className={Styles.box}>
         <Text style={{ margin: "10px 0" }}>
-          <div style={{ fontSize: "50px" }} className={Styles.number}>
+          <div style={{ fontSize: "45px" }} className={Styles.number}>
             {minutes}
           </div>
         </Text>
@@ -97,7 +97,7 @@ const Countdown = () => {
 
       <div className={Styles.box}>
         <Text style={{ margin: "10px 0" }}>
-          <div style={{ fontSize: "50px" }} className={Styles.number}>
+          <div style={{ fontSize: "45px" }} className={Styles.number}>
             {seconds}
           </div>
         </Text>
