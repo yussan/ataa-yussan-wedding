@@ -1,0 +1,19 @@
+.wrapper {
+    font-size: 20px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.radio {
+    font-family: 'Microsoft Sans Serif', sans-serif;
+    display: flex;
+    padding: 10px 0;
+    gap: 15px;
+}
+
+.radio input {
+    margin-right: 5px;
+    transform: scale(1.2);
+    margin-top: -5px;
+}

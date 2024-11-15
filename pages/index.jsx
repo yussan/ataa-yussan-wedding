@@ -21,6 +21,7 @@ export default function Home() {
   // LIFECYCLES
 
   useEffect(() => {
+    document.body.style.overflow = "hidden";
     setTimeout(() => {
       setReady(true);
     }, 800);

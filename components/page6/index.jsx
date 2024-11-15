@@ -62,7 +62,13 @@ const Page6 = () => {
                 return (
                   <div className={Styles.socmed}>
                     <img src={n.icon} alt={n.title} />
-                    <Text style={{ fontSize: "13px", marginTop: "12px" }}>
+                    <Text
+                      style={{
+                        fontSize: "13px",
+                        marginTop: 0,
+                        marginBottom: 0,
+                      }}
+                    >
                       {n.title}
                       <br />
                       {n.text}

@@ -8,7 +8,9 @@ const WelcomePage = ({ guestName = "FULL NAME" }) => {
   const [hide, useHide] = useState(false);
 
   const handleClickHide = () => {
+    console.log("ready...");
     useHide(true);
+    document.body.style.overflow = "auto";
   };
 
   return (
@@ -36,7 +38,7 @@ const WelcomePage = ({ guestName = "FULL NAME" }) => {
           <strong>{guestName.toUpperCase()}</strong>
         </Text>
         <Button onClick={handleClickHide} variant="outline">
-          Lihat Undangan
+          <strong>Lihat Undangan</strong>
         </Button>
       </div>
     </div>

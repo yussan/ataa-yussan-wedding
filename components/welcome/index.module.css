@@ -13,6 +13,7 @@
     z-index: 999;
     top: 0;
     transition: all 1.1s ease;
+    color: #FFF;
 }
 
 .wrapper-hide {
@@ -21,7 +22,6 @@
 
 .wrapper p {
     margin: 0;
-    color: #FFF;
 }
 
 

@@ -1,11 +1,15 @@
 import Style from "./index.module.css";
 
 // variant one of general, outline
-const Button = ({ children, variant = "solid", onClick, ...restProps }) => {
+const Button = ({
+  children,
+  className = "",
+  variant = "solid",
+  ...restProps
+}) => {
   return (
     <button
-      {...{ onClick }}
-      className={`${Style.btn}  ${Style[`btn-${variant}`]}`}
+      className={`${Style.btn} ${Style[`btn-${variant}`]} ${className}`}
       {...restProps}
     >
       {children}

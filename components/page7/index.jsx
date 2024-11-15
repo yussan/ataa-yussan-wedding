@@ -4,11 +4,18 @@ import Text from "../typography/Text";
 import Styles from "./index.module.css";
 import TextField from "../form/TextField";
 import TextArea from "../form/TextArea";
+import Radio from "../form/Radio";
+import Button from "../button";
 
 const Page7 = () => {
   const [valName, setValName] = useState("");
   const [valNote, setValNote] = useState("");
-  const [valComming, setValComming] = useState(true);
+  const [valComming, setValComming] = useState("yes");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(valName, valNote, valComming);
+  };
 
   return (
     <div className={Styles.wrapper}>
@@ -18,9 +25,61 @@ const Page7 = () => {
             Ucapan dan Doa
           </Title>
           <Text size="small">Berikan ucapan terbaik untuk kedua mempelai</Text>
-          <form>
-            <TextField />
-            <TextArea />
+          <form method="post" onSubmit={handleSubmit}>
+            <TextField
+              label="Nama*"
+              value={valName}
+              onChange={(e) => {
+                setValName(e.target.value);
+              }}
+              required
+            />
+            <TextArea
+              label="Ucapan*"
+              value={valNote}
+              rows={5}
+              onChange={(e) => {
+                setValNote(e.target.value);
+              }}
+              required
+            />
+            <Radio
+              value={valComming}
+              label="Kehadiran*"
+              onChange={(val) => {
+                setValComming(val);
+              }}
+              required
+            />
+
+            <Button
+              className="g-recaptcha"
+              data-sitekey="6Le-Rn4qAAAAAHHhOEta7v6chIqg2QHwTmdewGII"
+              data-callback="onSubmit"
+              data-action="submit"
+              type="submit"
+              style={{
+                width: "190px",
+                backgroundColor: "#2A4234",
+                color: "#FFF",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "left",
+                  marginRight: "20px",
+                }}
+              >
+                <img
+                  src="/assets/images/page-7/submit.png"
+                  alt="Submit button"
+                  style={{ marginRight: "20px" }}
+                />
+                <strong>Submit</strong>
+              </div>
+            </Button>
           </form>
         </div>
       </div>

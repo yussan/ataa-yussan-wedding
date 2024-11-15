@@ -1,0 +1,22 @@
+.wrapper {
+    font-size: 20px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.wrapper textarea {
+    font-family: 'Microsoft Sans Serif', sans-serif;
+    background-color: #FFF;
+    border: 1px solid #000;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 12px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
