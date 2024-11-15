@@ -17,7 +17,11 @@ const btnCalendar = ({ children, ...restProps }) => {
       </button>
       <br />
       <div
-        style={{ height: showCalendar ? "auto" : "0" }}
+        style={{
+          height: showCalendar ? "auto" : "0",
+          overflow: showCalendar ? "auto" : "hidden",
+          padding: showCalendar ? "15px" : "0",
+        }}
         className={Styles.calendarWrapper}
       >
         <a

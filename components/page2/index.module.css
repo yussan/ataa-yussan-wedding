@@ -33,14 +33,15 @@
 
 .headFlower {
     position: absolute;
+    width: 300px;
 }
 
 .headFlowerLeft {
     left: 0;
-    top: 65px;
+    top: 90px;
 }
 
 .headFlowerRight {
     right: 0;
-    bottom: 20px;
+    bottom: 50px;
 }
