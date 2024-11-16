@@ -10,6 +10,10 @@ const page5 = () => {
     "/assets/images/page-5/PRDNA-94.jpeg",
     "/assets/images/page-5/PRDNA-170.jpeg",
     "/assets/images/page-5/PRDNA-245.jpeg",
+
+    "/assets/images/page-5/STY02191.jpeg",
+    "/assets/images/page-5/STY02201.jpeg",
+
     "/assets/images/page-5/STY01859.jpeg",
     "/assets/images/page-5/STY01889.jpg",
     "/assets/images/page-5/STY01995.jpg",

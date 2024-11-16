@@ -16,7 +16,7 @@ const Page3 = () => {
           </Title>
           <Text size="small">
             Putri dari <br />
-            Bapak Sugeng Mugiarta & Ibu Hj. Darmini S. Ag
+            Bapak Sugeng Mugiarta &<br /> Ibu Hj. Darmini S. Ag
           </Text>
           <div className={Styles.socmed}>
             <a
@@ -43,7 +43,7 @@ const Page3 = () => {
           </Title>
           <Text size="small">
             Putra dari <br />
-            Bapak H. Moh Djumhuri, S.H. & Ibu Hj. Sriani
+            Bapak H. Moh Djumhuri, S.H. &<br /> Ibu Hj. Sriani
           </Text>
           <div className={Styles.socmed}>
             <a
