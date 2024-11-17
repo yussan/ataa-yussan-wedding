@@ -23,8 +23,11 @@ const Radio = ({ label, value, onChange }) => {
             type="radio"
             value="yes"
             checked={value === "yes"}
+            onChange={() => {
+              handleClick("yes");
+            }}
           />
-          <label for="yes">Hadir</label>
+          <label htmlFor="yes">Hadir</label>
         </div>
         <div>
           <input
@@ -33,8 +36,11 @@ const Radio = ({ label, value, onChange }) => {
             type="radio"
             value="no"
             checked={value === "no"}
+            onChange={() => {
+              handleClick("no");
+            }}
           />
-          <label for="no">Belum Bisa Hadir</label>
+          <label htmlFor="no">Belum Bisa Hadir</label>
         </div>
       </div>
     </div>

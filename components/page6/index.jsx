@@ -5,26 +5,26 @@ import Text from "../typography/Text";
 import Styles from "./index.module.css";
 
 const eWallet = [
-  {
-    icon: "/assets/images/page-6/logo-bca.png",
-    title: "BCA",
-    text: "44556677 a/n Yusuf Akhsan H.",
-  },
+  // {
+  //   icon: "/assets/images/page-6/logo-bca.png",
+  //   title: "BCA",
+  //   text: "44556677 a/n Yusuf Akhsan H.",
+  // },
   {
     icon: "/assets/images/page-6/logo-mandiri.png",
     title: "Bank Mandiri",
     text: "1370011737968 a/n Yusuf Akhsan H.",
   },
-  {
-    icon: "/assets/images/page-6/logo-ovo.png",
-    title: "OVO",
-    text: "6285645777298 a/n Yusuf Akhsan H.",
-  },
-  {
-    icon: "/assets/images/page-6/logo-linkaja.png",
-    title: "LinkAja",
-    text: "6285645777298 a/n Yusuf Akhsan H.",
-  },
+  // {
+  //   icon: "/assets/images/page-6/logo-ovo.png",
+  //   title: "OVO",
+  //   text: "6285645777298 a/n Yusuf Akhsan H.",
+  // },
+  // {
+  //   icon: "/assets/images/page-6/logo-linkaja.png",
+  //   title: "LinkAja",
+  //   text: "6285645777298 a/n Yusuf Akhsan H.",
+  // },
 ];
 
 const Page6 = () => {
@@ -60,7 +60,7 @@ const Page6 = () => {
             <>
               {eWallet.map((n) => {
                 return (
-                  <div className={Styles.socmed}>
+                  <div key={n.title} className={Styles.socmed}>
                     <img src={n.icon} alt={n.title} />
                     <Text
                       style={{

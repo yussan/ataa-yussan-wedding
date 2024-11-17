@@ -147,7 +147,7 @@ const Page7 = () => {
               <Text size="small">Belum ada pesan</Text>
             ) : (
               comments.map((n) => {
-                return <Comment {...n} />;
+                return <Comment key={n.dateTime} {...n} />;
               })
             )}
           </div>
