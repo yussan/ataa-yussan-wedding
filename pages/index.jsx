@@ -24,7 +24,7 @@ export default function Home() {
     document.body.style.overflow = "hidden";
     setTimeout(() => {
       setReady(true);
-    }, 1200);
+    }, 2000);
   }, []);
 
   return (
