@@ -24,49 +24,52 @@ export default function Home() {
     document.body.style.overflow = "hidden";
     setTimeout(() => {
       setReady(true);
-    }, 800);
+    }, 1200);
   }, []);
 
-  if (!ready)
-    return (
-      <div className={Styles.wrapperLogin}>
-        <img
-          className={Styles.loading}
-          src="/assets/images/flower front 1.png"
-          alt="loading"
-        />
-      </div>
-    );
-
   return (
-    <div className={Styles.wrapper}>
-      <WelcomePage guestName={guest} />
+    <>
+      {!ready && (
+        <div className={Styles.wrapperLogin}>
+          <img
+            className={Styles.loading}
+            src="/assets/images/flower front 1.png"
+            alt="loading"
+          />
+        </div>
+      )}
+      <div
+        style={{ display: ready ? "inherit" : "none" }}
+        className={Styles.wrapper}
+      >
+        <WelcomePage guestName={guest} />
 
-      <Page2 />
+        <Page2 />
 
-      <Page3 />
+        <Page3 />
 
-      <img
-        style={{ width: "100%", marginBottom: "-5px" }}
-        src="/assets/images/common/gradient-green-yellow.jpeg"
-      />
+        <img
+          style={{ width: "100%", marginBottom: "-5px" }}
+          src="/assets/images/common/gradient-green-yellow.jpeg"
+        />
 
-      <Page4 />
+        <Page4 />
 
-      <img
-        style={{ width: "100%", marginBottom: "-5px" }}
-        src="/assets/images/common/gradient-yellow-black.jpeg"
-      />
+        <img
+          style={{ width: "100%", marginBottom: "-5px" }}
+          src="/assets/images/common/gradient-yellow-black.jpeg"
+        />
 
-      <Page5 />
+        <Page5 />
 
-      <Page6 />
+        <Page6 />
 
-      <Page7 />
+        <Page7 />
 
-      <Footer />
+        <Footer />
 
-      {/* <Player /> */}
-    </div>
+        {/* <Player /> */}
+      </div>
+    </>
   );
 }

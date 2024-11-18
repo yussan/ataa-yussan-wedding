@@ -6,21 +6,27 @@ import Button from "../button";
 
 const WelcomePage = ({ guestName = "FULL NAME" }) => {
   const [hide, useHide] = useState(false);
-
-  const audio = new Audio(
-    "/audio/Nyoman Paul, Andi Rianto – The Way You Look At Me (Official Music Video) - small.mp3"
-  );
+  const [audio, setAudio] = useState(null);
 
   useEffect(() => {
-    audio.addEventListener(
-      "ended",
-      function () {
-        this.currentTime = 0;
-        this.play();
-      },
-      false
+    const nextAudio = new Audio(
+      "/audio/Nyoman Paul, Andi Rianto – The Way You Look At Me (Official Music Video) - small.mp3"
     );
+    setAudio(nextAudio);
   }, []);
+
+  useEffect(() => {
+    if (audio) {
+      audio.addEventListener(
+        "ended",
+        function () {
+          this.currentTime = 0;
+          this.play();
+        },
+        false
+      );
+    }
+  }, [audio]);
 
   const handleClickHide = () => {
     useHide(true);
