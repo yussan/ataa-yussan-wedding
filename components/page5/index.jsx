@@ -11,8 +11,8 @@ const page5 = () => {
     "/assets/images/page-5/PRDNA-170.jpeg",
     "/assets/images/page-5/PRDNA-245.jpeg",
 
-    "/assets/images/page-5/STY02191.jpeg",
-    "/assets/images/page-5/STY02201.jpeg",
+    "/assets/images/page-5/STY02172.jpeg",
+    "/assets/images/page-5/STY02201-small.jpeg",
 
     "/assets/images/page-5/STY01859.jpeg",
     "/assets/images/page-5/STY01889.jpg",

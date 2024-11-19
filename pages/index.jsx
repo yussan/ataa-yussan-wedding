@@ -11,7 +11,8 @@ import Page6 from "../components/page6";
 import Page7 from "../components/page7";
 import Footer from "../components/footer";
 
-import Bird from "../components/commons/birds";
+// import Bird from "../components/commons/birds";
+// import Butterfly from "../components/commons/butterfly";
 
 export default function Home() {
   const [ready, setReady] = useState(false);
@@ -73,6 +74,8 @@ export default function Home() {
         {/* <Player /> */}
 
         {/* <Bird /> */}
+
+        {/* <Butterfly /> */}
       </div>
     </>
   );
