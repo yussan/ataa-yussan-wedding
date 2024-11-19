@@ -1,0 +1,678 @@
+HTML CSS JSResult Skip Results Iframe
+
+/*
+Butterfly (vector):
+
+The CSS and HTML is prefixed by 'bflydo'.
+Copyright (c) 2021 by Jean Fan (https://codepen.io/JEFworks/pen/XzKJmv)
+
+Abstract butterflies:
+
+The CSS and HTML is prefixed by 'bfya'.
+Copyright (c) 2021 by Dmitri (https://codepen.io/xdknight/pen/yPORqb)
+
+Rose:
+
+The CSS and HTML is prefixed by 'rsea'.
+Copyright (c) 2021 by Sven Balzer (https://codepen.io/svebal/pen/RVWJaj)
+
+Flowers:
+
+The CSS and HTML is prefixed by 'flwra'.
+Copyright (c) 2021 by Irina (https://codepen.io/mayday1022/pen/ognxi)
+*/
+#flwraStage {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -3025;
+    display: none;
+}
+
+#flrwaInnerStage {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes flwraFadeAllAway {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.flwraContainer {
+    width: 228px;
+    height: 184px;
+    position: absolute;
+}
+
+.flwraInnerContainer {
+    width: 228px;
+    height: 184px;
+    position: relative;
+}
+
+.flwraFlower {
+    width: 100px;
+    display: block;
+}
+
+.flwraPetal {
+    display: block;
+    position: absolute;
+    top: 92px;
+    left: 114px;
+    width: 90px;
+    height: 90px;
+    box-shadow: 2px 2px 8px rgba(50, 50, 50, 0.3);
+    box-shadow: inset 10px 20px 10px rgba(50, 50, 50, 0.12);
+    transform-origin: 0% 0%;
+}
+
+.flwraHead {
+    display: block;
+    position: absolute;
+    opacity: 0.75;
+    left: 109px;
+    top: 74px;
+    left: 111px;
+    width: 10px;
+    height: 10px;
+    -khtml-border-radius: 50px 5px;
+    border-radius: 50px 5px;
+    box-shadow: 2px 2px 8px rgba(50, 50, 50, 0.3);
+    -webkit-transform-origin: 30% 190%;
+    -moz-transform-origin: 30% 190%;
+    -o-transform-origin: 30% 190%;
+    -ms-transform-origin: 30% 190%;
+    transform-origin: 30% 190%;
+}
+
+.flwraMid {
+    display: block;
+    position: absolute;
+    opacity: 0.75;
+    top: 72px;
+    left: 94px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px 50px;
+    box-shadow: 2px 2px 8px rgba(50, 50, 50, 0.3);
+    -webkit-transform-origin: 30% 190%;
+    -moz-transform-origin: 30% 190%;
+    -o-transform-origin: 30% 190%;
+    -ms-transform-origin: 30% 190%;
+    transform-origin: 30% 190%;
+}
+
+.bflydoBox {
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
+.bflydoContainer3 {
+    position: fixed;
+    right: 0;
+    z-index: 3000;
+}
+
+.bflydoContainer2 {
+    position: absolute;
+    right: 0;
+}
+
+@keyframes bfyvLeft-wing-flap {
+    0% {
+        -webkit-transform: rotate3d(0, 1, 0, 60deg);
+        -moz-transform: rotate3d(0, 1, 0, 60deg);
+        -ms-transform: rotate3d(0, 1, 0, 60deg);
+        -o-transform: rotate3d(0, 1, 0, 60deg);
+        transform: rotate3d(0, 1, 0, 60deg);
+    }
+
+    50% {
+        -webkit-transform: rotate3d(0, 1, 0, -70deg);
+        -moz-transform: rotate3d(0, 1, 0, -70deg);
+        -ms-transform: rotate3d(0, 1, 0, -70deg);
+        -o-transform: rotate3d(0, 1, 0, -70deg);
+        transform: rotate3d(0, 1, 0, -70deg);
+    }
+
+    100% {
+        -webkit-transform: rotate3d(0, 1, 0, 60deg);
+        -moz-transform: rotate3d(0, 1, 0, 60deg);
+        -ms-transform: rotate3d(0, 1, 0, 60deg);
+        -o-transform: rotate3d(0, 1, 0, 60deg);
+        transform: rotate3d(0, 1, 0, 60deg);
+    }
+}
+
+@keyframes bfyvRight-wing-flap {
+    0% {
+        -webkit-transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, 60deg);
+        -moz-transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, 60deg);
+        -ms-transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, 60deg);
+        -o-transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, 60deg);
+        transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, 60deg);
+    }
+
+    50% {
+        -webkit-transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, -70deg);
+        -moz-transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, -70deg);
+        -ms-transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, -70deg);
+        -o-transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, -70deg);
+        transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, -70deg);
+    }
+
+    100% {
+        -webkit-transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, 60deg);
+        -moz-transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, 60deg);
+        -ms-transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, 60deg);
+        -o-transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, 60deg);
+        transform: scale3d(-1, 1, 1) rotate3d(0, 1, 0, 60deg);
+    }
+}
+
+.bfyvButtErflY-ouTercoNtaiNer {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.bfyvButTerFly-coNtaIner {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.bfyvSpinPartCommon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.bfyvButterfly {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.bfyvWing {
+    position: absolute;
+    width: 25px;
+    height: 50px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.bfyvRight {
+    -webkit-transform-origin: 50px 50px;
+    -moz-transform-origin: 50px 50px;
+    -ms-transform-origin: 50px 50px;
+    -o-transform-origin: 50px 50px;
+    transform-origin: 25px 25px
+        /*50px 50px*/
+    ;
+    -webkit-animation: bfyvRight-wing-flap linear infinite;
+    -moz-animation: bfyvRight-wing-flap linear infinite;
+    -ms-animation: bfyvRight-wing-flap linear infinite;
+    -o-animation: bfyvRight-wing-flap linear infinite;
+    animation: bfyvRight-wing-flap linear infinite;
+}
+
+.bfyvLeft {
+    -webkit-transform-origin: 50px 50px;
+    -moz-transform-origin: 50px 50px;
+    -ms-transform-origin: 50px 50px;
+    -o-transform-origin: 50px 50px;
+    transform-origin: 25px 25px
+        /*50px 50px*/
+    ;
+    -webkit-animation: bfyvLeft-wing-flap linear infinite;
+    -moz-animation: bfyvLeft-wing-flap linear infinite;
+    -ms-animation: bfyvLeft-wing-flap linear infinite;
+    -o-animation: bfyvLeft-wing-flap linear infinite;
+    animation: bfyvLeft-wing-flap linear infinite;
+}
+
+.bfyvUse {
+    display: block;
+}
+
+.bfyvSvg-defs {
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
+#bfyaContainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -3020;
+}
+
+#bfyaMain {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    -moz-animation: bfyaFadeAllAway 1 forwards;
+    -webkit-animation: bfyaFadeAllAway 1 forwards;
+    -o-animation: bfyaFadeAllAway 1 forwards;
+    -ms-animation: bfyaFadeAllAway 1 forwards;
+    -khtml-animation: bfyaFadeAllAway 1 forwards;
+    animation: bfyaFadeAllAway 1 forwards;
+}
+
+.bfyaButterfly {
+    position: absolute;
+    left: 50%;
+}
+
+.bfyaButterfly::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    transform: matrix3d(1, 0, 0, 0, 0.57735027
+            /* tan(30) */
+            , 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+        /* skewX(30deg) */
+    ;
+    transform-origin: 50% 50%;
+    animation: bfyaFlapWingLeft ease-out infinite alternate;
+}
+
+.bfyaButterfly::before {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    transform: matrix3d(1, 0, 0, 0, -0.57735027
+            /* tan(-30) */
+            , 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+        /* skewX(-30deg) */
+    ;
+    transform-origin: 0% 50%;
+    animation: bfyaFlapWingRight ease-out infinite alternate;
+}
+
+@keyframes bfyaFadeAway {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes bfyaFadeAllAway {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bfyaFlapWingLeft {
+    0% {
+        transform: matrix3d(1, 0, 0, 0, 0.57735027
+                /* tan(30) */
+                , 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+            /* skewX(30deg) */
+            scale3d(.2, 1, 1)
+            /*scaleX(.2)*/
+        ;
+    }
+
+    100% {
+        transform: matrix3d(1, 0, 0, 0, 0.57735027
+                /* tan(30) */
+                , 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+            /* skewX(30deg) */
+            scale3d(1, 1, 1)
+            /* scaleX(1) */
+        ;
+    }
+}
+
+@keyframes bfyaFlapWingRight {
+    0% {
+        transform: matrix3d(1, 0, 0, 0, -0.57735027
+                /* tan(-30) */
+                , 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+            /* skewX(-30deg) */
+            scale3d(.2, 1, 1)
+            /* scaleX(.2) */
+        ;
+    }
+
+    100% {
+        transform: matrix3d(1, 0, 0, 0, -0.57735027
+                /* tan(-30) */
+                , 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+            /* skewX(-30deg) */
+            scale3d(1, 1, 1)
+            /* scaleX(1) */
+        ;
+    }
+}
+
+.rseaOuterContainer {
+    width: 100px;
+    height: 300px;
+    position: fixed;
+    right: 70px;
+    /* same as variable 'cPositionOfRoseFromBottomInButterflyDoodle' */
+    bottom: 40px;
+    -moz-transform-origin: 43px 150px;
+    -webkit-transform-origin: 43px 150px;
+    -o-transform-origin: 43px 150px;
+    -ms-transform-origin: 43px 150px;
+    -khtml-transform-origin: 43px 150px;
+    transform-origin: 43px 150px;
+    -moz-animation: rseaFadeAllAway 1 both;
+    -webkit-animation: rseaFadeAllAway 1 both;
+    -o-animation: rseaFadeAllAway 1 both;
+    -ms-animation: rseaFadeAllAway 1 both;
+    -khtml-animation: rseaFadeAllAway 1 both;
+    animation: rseaFadeAllAway 1 both;
+    display: none;
+    z-index: -3030;
+}
+
+.rseaContainer {
+    width: 100px;
+    height: 300px;
+    position: relative;
+}
+
+.rseaContainer div {
+    position: absolute;
+}
+
+.rseaContainer .rseaRose-petals>div {
+    background: #d52d58;
+    width: 45px;
+    height: 80px;
+    position: absolute;
+}
+
+.rseaContainer .rseaRose-petals>div:nth-child(1) {
+    border-radius: 15px;
+    left: 20px;
+    top: -6px;
+    background: #d52d58;
+}
+
+.rseaContainer .rseaRose-petals>div:nth-child(2),
+.rseaContainer .rseaRose-petals>div:nth-child(4),
+.rseaContainer .rseaRose-petals>div:nth-child(6) {
+    border-radius: 0px 30px 0px 30px;
+    background: #b81b43;
+    left: 0;
+    -moz-transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+    -o-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    -khtml-transform-origin: bottom right;
+    transform-origin: bottom right;
+}
+
+.rseaContainer .rseaRose-petals>div:nth-child(3),
+.rseaContainer .rseaRose-petals>div:nth-child(5),
+.rseaContainer .rseaRose-petals>div:nth-child(7) {
+    border-radius: 30px 0px 30px 0px;
+    left: 40px;
+    -moz-transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+    -o-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    -khtml-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+
+.rseaContainer .rseaRose-petals>div:nth-child(2) {
+    z-index: 5;
+    background: #9e183a;
+    top: 10px;
+    height: 70px;
+}
+
+.rseaContainer .rseaRose-petals>div:nth-child(3) {
+    z-index: 4;
+    background: #9e183a;
+    top: 10px;
+    height: 70px;
+}
+
+.rseaContainer .rseaRose-petals>div:nth-child(4) {
+    z-index: 3;
+    background: #b81b43;
+    top: 5px;
+    height: 75px;
+}
+
+.rseaContainer .rseaRose-petals>div:nth-child(5) {
+    z-index: 2;
+    background: #b81b43;
+    top: 5px;
+    height: 75px;
+}
+
+.rseaContainer .rseaRose-petals>div:nth-child(6) {
+    z-index: 1;
+    background: #c9204b;
+    /*top: "";*/
+    /*height: "";*/
+}
+
+.rseaContainer .rseaRose-petals>div:nth-child(7) {
+    z-index: 0;
+    background: #c9204b;
+    /*top: "";*/
+    /*height: "";*/
+}
+
+.rseaContainer .rseaRose-leaves>div:nth-last-child(1) {
+    width: 55px;
+    height: 30px;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -o-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -khtml-border-radius: 100px;
+    border-radius: 100px;
+}
+
+.rseaContainer .rseaRose-leaves>div:nth-child(1) {
+    width: 6px;
+    height: 230px;
+    border: none;
+    top: 80px;
+    left: 40px;
+}
+
+.rseaContainer .rseaThorns>div {
+    width: 30px;
+    height: 30px;
+    top: 100px;
+    left: 10px;
+}
+
+.rseaContainer .rseaThorns>div:after {
+    width: 41px;
+    height: 31px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -o-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -khtml-border-radius: 100%;
+    border-radius: 100%;
+    background: white;
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 17px;
+}
+
+.rseaContainer .rseaThorns>div:before {
+    width: 41px;
+    height: 31px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -o-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -khtml-border-radius: 100%;
+    border-radius: 100%;
+    background: white;
+    content: "";
+    position: absolute;
+    left: -11px;
+    top: -11px;
+    z-index: 0;
+}
+
+.rseaContainer .rseaThorns>div:nth-child(2) {
+    top: 150px;
+    -moz-transform: rotate3d(0, 0, 1, 180deg);
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+    -o-transform: rotate3d(0, 0, 1, 180deg);
+    -ms-transform: rotate3d(0, 0, 1, 180deg);
+    -khtml-transform: rotate3d(0, 0, 1, 180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+    left: 45px;
+}
+
+.rseaContainer .rseaThorns>div:nth-child(3) {
+    top: 180px;
+}
+
+.rseaContainer .rseaThorns>div:nth-child(4) {
+    top: 220px;
+    -moz-transform: rotate3d(0, 0, 1, 180deg);
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+    -o-transform: rotate3d(0, 0, 1, 180deg);
+    -ms-transform: rotate3d(0, 0, 1, 180deg);
+    -khtml-transform: rotate3d(0, 0, 1, 180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+    left: 45px;
+}
+
+@keyframes rseaOpenRose30 {
+    100% {
+        -moz-transform: rotate3d(0, 0, 1, 60deg);
+        -webkit-transform: rotate3d(0, 0, 1, 60deg);
+        -o-transform: rotate3d(0, 0, 1, 60deg);
+        -ms-transform: rotate3d(0, 0, 1, 60deg);
+        -khtml-transform: rotate3d(0, 0, 1, 60deg);
+        transform: rotate3d(0, 0, 1, 60deg);
+    }
+}
+
+@keyframes rseaOpenRose31 {
+    100% {
+        -moz-transform: rotate3d(0, 0, 1, 60deg);
+        -webkit-transform: rotate3d(0, 0, 1, 60deg);
+        -o-transform: rotate3d(0, 0, 1, 60deg);
+        -ms-transform: rotate3d(0, 0, 1, 60deg);
+        -khtml-transform: rotate3d(0, 0, 1, 60deg);
+        transform: rotate3d(0, 0, 1, 60deg);
+    }
+}
+
+@keyframes rseaOpenRose40 {
+    100% {
+        -moz-transform: rotate3d(0, 0, 1, -30deg);
+        -webkit-transform: rotate3d(0, 0, 1, -30deg);
+        -o-transform: rotate3d(0, 0, 1, -30deg);
+        -ms-transform: rotate3d(0, 0, 1, -30deg);
+        -khtml-transform: rotate3d(0, 0, 1, -30deg);
+        transform: rotate3d(0, 0, 1, -30deg);
+    }
+}
+
+@keyframes rseaOpenRose41 {
+    100% {
+        -moz-transform: rotate3d(0, 0, 1, -30deg);
+        -webkit-transform: rotate3d(0, 0, 1, -30deg);
+        -o-transform: rotate3d(0, 0, 1, -30deg);
+        -ms-transform: rotate3d(0, 0, 1, -30deg);
+        -khtml-transform: rotate3d(0, 0, 1, -30deg);
+        transform: rotate3d(0, 0, 1, -30deg);
+    }
+}
+
+@keyframes rseaOpenRose50 {
+    100% {
+        -moz-transform: rotate3d(0, 0, 1, 30deg);
+        -webkit-transform: rotate3d(0, 0, 1, 30deg);
+        -o-transform: rotate3d(0, 0, 1, 30deg);
+        -ms-transform: rotate3d(0, 0, 1, 30deg);
+        -khtml-transform: rotate3d(0, 0, 1, 30deg);
+        transform: rotate3d(0, 0, 1, 30deg);
+    }
+}
+
+@keyframes rseaOpenRose51 {
+    100% {
+        -moz-transform: rotate3d(0, 0, 1, 30deg);
+        -webkit-transform: rotate3d(0, 0, 1, 30deg);
+        -o-transform: rotate3d(0, 0, 1, 30deg);
+        -ms-transform: rotate3d(0, 0, 1, 30deg);
+        -khtml-transform: rotate3d(0, 0, 1, 30deg);
+        transform: rotate3d(0, 0, 1, 30deg);
+    }
+}

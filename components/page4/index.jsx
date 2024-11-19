@@ -2,7 +2,13 @@ import Styles from "./index.module.css";
 import Title from "../typography/Title";
 import Text from "../typography/Text";
 
-const Page4 = () => {
+const JamAcara = {
+  1: "10:00 - 11:00 WIB",
+  2: "11:00 - 12:00 WIB",
+  0: "Pukul 10:00 WIB - Selesai",
+};
+
+const Page4 = ({ jam = "0" }) => {
   return (
     <div className={Styles.wrapper}>
       <div className={Styles.content}>
@@ -45,7 +51,7 @@ const Page4 = () => {
             </strong>
           </Text>
           <Text size="small">
-            Pukul 11:00 WIB - Selesai
+            Pukul {JamAcara[jam]}
             <br />
             Di Gedung Expotorium UNMUH,
             <br /> Kab. Ponorogo, Jawa Timur

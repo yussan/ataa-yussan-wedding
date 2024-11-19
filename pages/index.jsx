@@ -11,12 +11,14 @@ import Page6 from "../components/page6";
 import Page7 from "../components/page7";
 import Footer from "../components/footer";
 
+import Bird from "../components/commons/birds";
+
 export default function Home() {
   const [ready, setReady] = useState(false);
   // const [isWelcome, setIsWelcome] = useState(true);
 
   const router = useRouter();
-  const { guest } = router?.query || {};
+  const { guest, jam } = router?.query || {};
 
   // LIFECYCLES
 
@@ -53,7 +55,7 @@ export default function Home() {
           src="/assets/images/common/gradient-green-yellow.jpeg"
         />
 
-        <Page4 />
+        <Page4 jam={jam} />
 
         <img
           style={{ width: "100%", marginBottom: "-5px" }}
@@ -69,6 +71,8 @@ export default function Home() {
         <Footer />
 
         {/* <Player /> */}
+
+        {/* <Bird /> */}
       </div>
     </>
   );
