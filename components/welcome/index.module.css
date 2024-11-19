@@ -1,5 +1,5 @@
 .wrapper {
-    background-image: url('/assets/images/yna/home.jpg');
+    background-image: url('/assets/images/yna/home-small.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -7,9 +7,9 @@
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
-    width:500px;
+    width: 500px;
     max-width: 100%;
-    margin:0 auto;
+    margin: 0 auto;
     z-index: 999;
     top: 0;
     transition: all 1.1s ease;
@@ -45,22 +45,14 @@
     background-size: cover;
 }
 
-.top .text-title {
+.top .text-title {}
 
-}
+.top .text-bride {}
 
-.top .text-bride {
-
-}
-
-.top .text-yth {
-
-}
+.top .text-yth {}
 
 
-.top .text-yth {
-
-}
+.top .text-yth {}
 
 .top img {
     margin: 12px 0;
