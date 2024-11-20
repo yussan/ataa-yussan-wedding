@@ -9,9 +9,7 @@ const WelcomePage = ({ guestName = "FULL NAME" }) => {
   const [audio, setAudio] = useState(null);
 
   useEffect(() => {
-    const nextAudio = new Audio(
-      "/audio/Nyoman Paul, Andi Rianto – The Way You Look At Me (Official Music Video) - small.mp3"
-    );
+    const nextAudio = new Audio("/audio/music.mp3");
     setAudio(nextAudio);
   }, []);
 
