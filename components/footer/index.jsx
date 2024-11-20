@@ -9,7 +9,7 @@ const Footer = () => {
       <a
         targe="_blank"
         rel="noopener noreferer"
-        href="https://byidmore.com"
+        href="https://byymg.com"
         title="YMG Team"
       >
         YMG Team
