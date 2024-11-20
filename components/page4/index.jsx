@@ -5,7 +5,7 @@ import Text from "../typography/Text";
 const JamAcara = {
   1: "10:00 - 11:00 WIB",
   2: "11:00 - 12:00 WIB",
-  0: "Pukul 10:00 WIB - Selesai",
+  0: "10:00 WIB - Selesai",
 };
 
 const Page4 = ({ jam = "0" }) => {

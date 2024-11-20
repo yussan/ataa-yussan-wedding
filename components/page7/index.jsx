@@ -15,6 +15,7 @@ const Page7 = ({ showAttend }) => {
   const [valComming, setValComming] = useState("yes");
   const [comments, setComments] = useState([]);
   const [commentsPage, setCommentPage] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetchComments();
@@ -48,6 +49,8 @@ const Page7 = ({ showAttend }) => {
   };
 
   const saveComments = async () => {
+    setLoading(true);
+
     const payload = {
       name: valName,
       message: valNote,
@@ -72,6 +75,10 @@ const Page7 = ({ showAttend }) => {
       setValName("");
       setValNote("");
       setValComming("yes");
+
+      setLoading(false);
+    } else {
+      setLoading(false);
     }
 
     alert(dataJson?.message || "Terjadi kesalahan");
@@ -117,6 +124,7 @@ const Page7 = ({ showAttend }) => {
               // data-sitekey="6Le-Rn4qAAAAAHHhOEta7v6chIqg2QHwTmdewGII"
               // data-callback="onSubmit"
               // data-action="submit"
+              disabled={loading}
               type="submit"
               style={{
                 width: "190px",
@@ -137,7 +145,7 @@ const Page7 = ({ showAttend }) => {
                   alt="Submit button"
                   style={{ marginRight: "20px" }}
                 />
-                <strong>Submit</strong>
+                <strong>{loading ? "Loading..." : "Submit"}</strong>
               </div>
             </Button>
           </form>
@@ -146,7 +154,7 @@ const Page7 = ({ showAttend }) => {
           <br />
 
           <div>
-            {comments?.status ? (
+            {comments?.status && comments?.result ? (
               comments?.result?.length < 1 ? (
                 <Text size="small">Belum ada pesan</Text>
               ) : (
@@ -157,7 +165,7 @@ const Page7 = ({ showAttend }) => {
                 })
               )
             ) : (
-              "Loading..."
+              "Belum ada pesan"
             )}
           </div>
         </div>
