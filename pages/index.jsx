@@ -19,7 +19,7 @@ export default function Home() {
   // const [isWelcome, setIsWelcome] = useState(true);
 
   const router = useRouter();
-  const { guest, jam } = router?.query || {};
+  const { guest, jam, showAttend } = router?.query || {};
 
   // LIFECYCLES
 
@@ -67,7 +67,7 @@ export default function Home() {
 
         <Page6 />
 
-        <Page7 />
+        <Page7 showAttend={showAttend} />
 
         <Footer />
 

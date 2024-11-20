@@ -9,23 +9,12 @@ import Radio from "../form/Radio";
 import Button from "../button";
 import Comment from "../commons/comments";
 
-const dummyComment = [
-  {
-    id: "1234",
-    name: "Aldia Itii Rihmitiki",
-    note: "Sayang semua kok",
-    dateTime: "2024-11-15T03:49:12Z",
-    attendance: "yes",
-  },
-];
-
-const LOCAL_STORAGE_KEY = "yna_comments";
-
-const Page7 = () => {
+const Page7 = ({ showAttend }) => {
   const [valName, setValName] = useState("");
   const [valNote, setValNote] = useState("");
   const [valComming, setValComming] = useState("yes");
   const [comments, setComments] = useState([]);
+  const [commentsPage, setCommentPage] = useState(0);
 
   useEffect(() => {
     fetchComments();
@@ -51,27 +40,41 @@ const Page7 = () => {
     });
   };
 
-  const fetchComments = () => {
-    const commentData = localStorage.getItem(LOCAL_STORAGE_KEY);
+  const fetchComments = async () => {
+    const data = await fetch(`/api/form`);
+    const dataJson = await data.json();
 
-    if (commentData) {
-      const commentDataArr = JSON.parse(commentData);
-      setComments(commentDataArr);
-    }
+    setComments(dataJson);
   };
 
-  const saveComments = () => {
-    const currComment = [...comments];
-    currComment.unshift({
+  const saveComments = async () => {
+    const payload = {
       name: valName,
-      note: valNote,
-      dateTime: new Date().toISOString(),
-      attendance: valComming,
+      message: valNote,
+      attend: valComming,
+    };
+
+    const data = await fetch(`/api/form`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
     });
 
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(currComment));
+    const dataJson = await data.json();
 
-    fetchComments();
+    if (dataJson?.status === 201) {
+      fetchComments();
+
+      // reset form value
+      setValName("");
+      setValNote("");
+      setValComming("yes");
+    }
+
+    alert(dataJson?.message || "Terjadi kesalahan");
   };
 
   return (
@@ -143,12 +146,18 @@ const Page7 = () => {
           <br />
 
           <div>
-            {comments.length < 1 ? (
-              <Text size="small">Belum ada pesan</Text>
+            {comments?.status ? (
+              comments?.result?.length < 1 ? (
+                <Text size="small">Belum ada pesan</Text>
+              ) : (
+                comments.result.map((n) => {
+                  return (
+                    <Comment key={n.createdAt} showAttend={showAttend} {...n} />
+                  );
+                })
+              )
             ) : (
-              comments.map((n) => {
-                return <Comment key={n.dateTime} {...n} />;
-              })
+              "Loading..."
             )}
           </div>
         </div>
