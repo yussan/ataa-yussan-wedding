@@ -1,7 +1,7 @@
 import Style from "./index.module.css";
 
 const fontSize = {
-  large: "40px",
+  large: "30px",
   medium: "25px",
   small: "18px",
 };

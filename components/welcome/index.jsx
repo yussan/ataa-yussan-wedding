@@ -53,7 +53,7 @@ const WelcomePage = ({ guestName = "FULL NAME" }) => {
           <br />
           Bapak/Ibu/Saudara/i
         </Text>
-        <Text style={{ marginBottom: "12px" }} size="large">
+        <Text style={{ marginBottom: "12px" }} size="medium">
           <strong>{guestName.toUpperCase()}</strong>
         </Text>
         <Button onClick={handleClickHide} variant="outline">
