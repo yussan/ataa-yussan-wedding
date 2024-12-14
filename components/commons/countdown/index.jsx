@@ -8,7 +8,7 @@ const Countdown = () => {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const targetDate = new Date("2024-12-13 19:00").getTime();
+  const targetDate = new Date("2024-12-14 19:00").getTime();
 
   useEffect(() => {
     setInterval(() => {
