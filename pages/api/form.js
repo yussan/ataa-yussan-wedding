@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   if (req.method === "GET") {
     const { page = 0 } = req.query;
 
-    const data = await fetch(`${HOST_BE}/yna?page=${page}&limit=50`);
+    const data = await fetch(`${HOST_BE}/yna?page=${page}&limit=100`);
     const dataJson = await data.json();
 
     return res.json(dataJson);
