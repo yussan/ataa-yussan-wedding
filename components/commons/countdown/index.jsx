@@ -8,7 +8,7 @@ const Countdown = () => {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const targetDate = new Date("2024-12-14 19:00").getTime();
+  const targetDate = new Date("2024-12-13 19:00").getTime();
 
   useEffect(() => {
     setInterval(() => {
@@ -65,7 +65,7 @@ const Countdown = () => {
       <div className={Styles.box}>
         <Text style={{ margin: "10px 0" }}>
           <div style={{ fontSize: "45px" }} className={Styles.number}>
-            {days}
+            {days <= 0 ? 0 : days}
           </div>
         </Text>
         <Text style={{ margin: "0 0 10px", fontWeight: 100 }}>
@@ -76,7 +76,7 @@ const Countdown = () => {
       <div className={Styles.box}>
         <Text style={{ margin: "10px 0" }}>
           <div style={{ fontSize: "45px" }} className={Styles.number}>
-            {hours}
+            {hours <= 0 ? 0 : hours}
           </div>
         </Text>
         <Text style={{ margin: "0 0 10px", fontWeight: 100 }}>
@@ -87,7 +87,7 @@ const Countdown = () => {
       <div className={Styles.box}>
         <Text style={{ margin: "10px 0" }}>
           <div style={{ fontSize: "45px" }} className={Styles.number}>
-            {minutes}
+            {minutes <= 0 ? 0 : minutes}
           </div>
         </Text>
         <Text style={{ margin: "0 0 10px", fontWeight: 100 }}>
@@ -98,7 +98,7 @@ const Countdown = () => {
       <div className={Styles.box}>
         <Text style={{ margin: "10px 0" }}>
           <div style={{ fontSize: "45px" }} className={Styles.number}>
-            {seconds}
+            {seconds <= 0 ? 0 : seconds}
           </div>
         </Text>
         <Text style={{ margin: "0 0 10px", fontWeight: 100 }}>
