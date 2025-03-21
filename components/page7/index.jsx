@@ -112,7 +112,7 @@ const Page7 = ({ showAttend }) => {
               // data-sitekey="6Le-Rn4qAAAAAHHhOEta7v6chIqg2QHwTmdewGII"
               // data-callback="onSubmit"
               // data-action="submit"
-              disabled={loading}
+              disabled
               type="submit"
               style={{
                 width: "190px",
