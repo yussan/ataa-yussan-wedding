@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Script from "next/script";
 import Title from "../typography/Title";
 import Text from "../typography/Text";
@@ -8,18 +8,13 @@ import TextArea from "../form/TextArea";
 import Radio from "../form/Radio";
 import Button from "../button";
 import Comment from "../commons/comments";
+import CommentData from "../../data/comments.json";
 
 const Page7 = ({ showAttend }) => {
   const [valName, setValName] = useState("");
   const [valNote, setValNote] = useState("");
   const [valComming, setValComming] = useState("yes");
-  const [comments, setComments] = useState([]);
-  const [commentsPage, setCommentPage] = useState(0);
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    fetchComments();
-  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,13 +34,6 @@ const Page7 = ({ showAttend }) => {
           }
         });
     });
-  };
-
-  const fetchComments = async () => {
-    const data = await fetch(`/api/form`);
-    const dataJson = await data.json();
-
-    setComments(dataJson);
   };
 
   const saveComments = async () => {
@@ -154,19 +142,11 @@ const Page7 = ({ showAttend }) => {
           <br />
 
           <div>
-            {comments?.status && comments?.result ? (
-              comments?.result?.length < 1 ? (
-                <Text size="small">Belum ada pesan</Text>
-              ) : (
-                comments.result.map((n) => {
-                  return (
-                    <Comment key={n.createdAt} showAttend={showAttend} {...n} />
-                  );
-                })
-              )
-            ) : (
-              "Belum ada pesan"
-            )}
+            {CommentData.map((n) => {
+              return (
+                <Comment key={n.createdAt} showAttend={showAttend} {...n} />
+              );
+            })}
           </div>
         </div>
       </div>
